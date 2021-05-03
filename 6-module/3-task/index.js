@@ -80,16 +80,5 @@ export default class Carousel {
         }
       }
     });
-
-    this.elem.addEventListener('click', event => {
-      const isButton = event.target.nodeName === 'BUTTON';
-      if (isButton) {
-        const event = new CustomEvent("product-add", {
-          detail: this.slides.id,
-          bubbles: true
-        });
-        this.elem.dispatchEvent(event);
-      }
-    });
   }
 }
