@@ -37,7 +37,6 @@ export default class Carousel {
     }
 
     this.elem.addEventListener('click', event => {
-      console.log(event);
       const isButton = event.target.nodeName === 'BUTTON';
       const id = event.path[2].dataset.id;
       if (isButton) {
@@ -59,7 +58,6 @@ export default class Carousel {
     carouselArrowLeft.style.display = 'none';
     carouselArrowLeft.addEventListener('click', function() {
     let sliderWidth = slider.offsetWidth;
-    console.log('offset',sliderWidth)
       if (x < 0){
         x += sliderWidth;
         slider.style.transform = `translateX(${x}px)`;
@@ -71,7 +69,6 @@ export default class Carousel {
     } );
     carouselArrowRight.addEventListener('click', function() {
       let sliderWidth = slider.offsetWidth;
-      console.log('offset',sliderWidth);
       if (x > -1 * slideQuantity * sliderWidth) {
         x -= sliderWidth;
         slider.style.transform = `translateX(${x}px)`;
