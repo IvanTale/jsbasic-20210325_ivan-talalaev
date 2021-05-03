@@ -37,6 +37,7 @@ export default class Carousel {
     }
 
     this.elem.addEventListener('click', event => {
+      console.log(event);
       const isButton = event.target.nodeName === 'BUTTON';
       const id = event.path[2].dataset.id;
       if (isButton) {
